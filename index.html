@@ -1,317 +1,294 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrutheshwari Pillete | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ELEGANT EDITORIAL THEME */
+        :root {
+            --bg-color: #F9F8F4;      
+            --text-color: #1B1B1B;    
+            --accent-color: #5A5A5A;  
+            --border-color: #D3D3D3;  
+            --serif: 'Playfair Display', serif;
+            --sans: 'Lato', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--sans);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.5px; }
+        h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; display: inline-block; }
+        h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: #000; }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+        
+        /* LAYOUT */
+        nav { 
+            position: fixed; top: 0; width: 100%; background: var(--bg-color); 
+            border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1.5rem 0;
+        }
+        .nav-container { 
+            max-width: 1200px; margin: 0 auto; display: flex; 
+            justify-content: space-between; align-items: center; padding: 0 2rem;
+        }
+        .logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 3rem; list-style: none; }
+        .nav-links a { 
+            text-decoration: none; color: var(--text-color); font-family: var(--sans); 
+            text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;
+        }
+
+        section { padding: 8rem 2rem; max-width: 1200px; margin: 0 auto; }
+        
+        /* HERO */
+        .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 1px solid var(--border-color); margin-top: 60px; }
+        .hero-tag { font-family: var(--sans); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 1.5rem; display: block; }
+
+        /* JOURNAL GRID */
+        .digest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; border: 1px solid var(--border-color); }
+        .article-item { padding: 3rem; border-bottom: 1px solid var(--border-color); border-right: 1px solid var(--border-color); background: #fff; }
+        .week-tag { font-family: var(--sans); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-color); display: block; margin-bottom: 0.5rem; }
+        
+        /* MEDIA HANDLERS */
+        video, iframe { width: 100%; border-radius: 4px; margin-top: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        iframe { aspect-ratio: 16/9; border: none; }
+        
+        .download-btn {
+            display: inline-block; padding: 0.6rem 1.2rem; border: 1px solid var(--text-color);
+            text-decoration: none; color: var(--text-color); font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; margin-right: 0.5rem;
+            transition: all 0.3s;
+        }
+        .download-btn:hover { background: var(--text-color); color: #fff; }
+
+        /* EXPERIENCE */
+        .resume-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; border-top: 1px solid var(--border-color); padding-top: 4rem; }
+        .resume-role { font-family: var(--serif); font-size: 1.4rem; font-style: italic; }
+        .resume-date { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color); }
+
+        /* PROJECTS */
+        .project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 6rem; align-items: center; }
+        .project-img-placeholder { 
+            width: 100%; height: 300px; background-color: #EFEFEF; 
+            display: flex; align-items: center; justify-content: center; 
+            color: #999; font-family: var(--serif); font-style: italic;
+        }
+
+        /* CONTACT */
+        .contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .resume-grid, .project-row { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Amrutheshwari Pillete | Portfolio&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* ELEGANT EDITORIAL THEME */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--bg-color: #F9F8F4; <span class="Apple-converted-space">     </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-color: #1B1B1B; <span class="Apple-converted-space">   </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--accent-color: #5A5A5A; <span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--border-color: #D3D3D3; <span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--serif: 'Playfair Display', serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--sans: 'Lato', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--bg-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: var(--sans);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 300;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* TYPOGRAPHY */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.5px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 1rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h2 { font-size: 2.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; display: inline-block; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: #000; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>p { margin-bottom: 1.5rem; font-size: 1.05rem; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* LAYOUT */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>nav {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed; top: 0; width: 100%; background: var(--bg-color);<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1.5rem 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-container {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 1200px; margin: 0 auto; display: flex;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-between; align-items: center; padding: 0 2rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-links { display: flex; gap: 3rem; list-style: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-links a {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none; color: var(--text-color); font-family: var(--sans);<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>section { padding: 8rem 2rem; max-width: 1200px; margin: 0 auto; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* HERO */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 1px solid var(--border-color); margin-top: 60px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.hero-tag { font-family: var(--sans); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 1.5rem; display: block; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* JOURNAL GRID */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.digest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; border: 1px solid var(--border-color); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.article-item { padding: 3rem; border-bottom: 1px solid var(--border-color); border-right: 1px solid var(--border-color); background: #fff; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.week-tag { font-family: var(--sans); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-color); display: block; margin-bottom: 0.5rem; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* MEDIA HANDLERS */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>video { width: 100%; border-radius: 4px; margin-top: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.download-btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block; padding: 0.6rem 1.2rem; border: 1px solid var(--text-color);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none; color: var(--text-color); font-size: 0.8rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-transform: uppercase; letter-spacing: 1px; margin-top: 1rem; margin-right: 0.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.download-btn:hover { background: var(--text-color); color: #fff; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* EXPERIENCE */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.resume-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; border-top: 1px solid var(--border-color); padding-top: 4rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.resume-role { font-family: var(--serif); font-size: 1.4rem; font-style: italic; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.resume-date { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color); }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* PROJECTS */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.project-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 6rem; align-items: center; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.project-img-placeholder {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%; height: 300px; background-color: #EFEFEF;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex; align-items: center; justify-content: center;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #999; font-family: var(--serif); font-style: italic;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* CONTACT */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>h1 { font-size: 3rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.resume-grid, .project-row { grid-template-columns: 1fr; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.nav-links { display: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="nav-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="logo"&gt;A. PILLETE&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul class="nav-links"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#journal"&gt;Journal&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="about" class="hero"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="hero-content"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="hero-tag"&gt;CON 598 Portfolio&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1&gt;Amrutheshwari Pillete&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p style="font-style: italic; font-size: 1.5rem; margin-bottom: 1rem;"&gt;Master's Student in Construction Management&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Architectural background with a passion for combining technical expertise, problem-solving, and AI applications in construction operations.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Experience&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="resume-grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="resume-date"&gt;Prior Experience&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="resume-role"&gt;Freelance Interior Designer&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Designed residential &amp; commercial projects; managed contractor timelines.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="resume-date"&gt;Internship&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="resume-role"&gt;Arth Design Build&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Assisted in architectural design documentation and coordination.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="resume-date"&gt;Leadership&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="resume-role"&gt;Team Lead (Events)&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Led 200+ students in planning and executing large-scale campus events.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="resume-date"&gt;Media&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 class="resume-role"&gt;IMDB Credits&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Production credits for over 5 movies and web series.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="journal"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;AI Research Journal&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="digest-grid"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 02&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;AI Digest: Weekly Analysis&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Review of the latest AI developments impacting the sector.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week2_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Your browser does not support the video tag.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 03&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Pathways to AGI&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Exploring the roadmap to Artificial General Intelligence.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week3_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 04&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;OpenAI Superintelligence&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Analysis of OpenAI's strategic direction.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week4_slides.pdf" class="download-btn" download&gt;Download PDF&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week4_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 05&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;AI on the Jobsite&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Practical applications of AI tools on site.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week5_slides.pdf" class="download-btn" download&gt;Download PDF&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week5_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 06&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;The AEC Trifecta&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Uniting AI, Digital Twins, and BIM.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week6_slides.pptx" class="download-btn" download&gt;Download PPT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week6_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 07&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;AI Digest Part II&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Continued analysis of AI integration in construction workflows.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week7_slides.pptx" class="download-btn" download&gt;Download PPT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week7_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 08&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;AI &amp; Antitrust&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Legal implications of AI monopolies.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week8_slides.pptx" class="download-btn" download&gt;Download PPT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week8_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 09&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;End of Pre-Training Era&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Analysis of the shift in AI training methodologies.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week9_slides.pdf" class="download-btn" download&gt;Download PDF&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week9_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p style="margin-top: 1rem; font-size: 0.9rem;"&gt;Additional Analysis:&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week9_video2.mov" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week9_video2.mov" type="video/quicktime"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;div class="article-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Week 10&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Construction's AI Paradox&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Why construction struggles to adopt AI.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/week10_slides.pptx" class="download-btn" download&gt;Download PPT&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/week10_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="projects"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Semester Projects&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="project-row"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-img-placeholder"&gt;Zero360 Video&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-info"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Safety Engineering&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Zero360 Safety Analysis&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Comprehensive hazard analysis and prevention strategy group project.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_zero360_report.pdf" class="download-btn" download&gt;Read Report&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;video controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;source src="media/project_zero360_video.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="project-row"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-info"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;AI Research&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;LLM Prompt Evaluation&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Testing and evaluating Large Language Model responses for construction management queries.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_llm_report.pdf" class="download-btn" download&gt;Download Report (PDF)&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_llm_slides.pptx" class="download-btn" download&gt;Download Slides (PPT)&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-img-placeholder"&gt;LLM Data Visualization&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="project-row"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-img-placeholder"&gt;GPT Interface&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="project-info"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="week-tag"&gt;Custom GPT&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Jobsite Tool Tracker&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;Development of a custom GPT agent to assist in tracking jobsite tools and inventory.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_tooltracker.pptx" class="download-btn" download&gt;Presentation (PPT)&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_tooltracker.pdf" class="download-btn" download&gt;Report 1 (PDF)&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="media/project_tooltracker2.pdf" class="download-btn" download&gt;Report 2 (PDF)&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="contact" style="text-align: center; border-top: 1px solid var(--border-color);"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Get In Touch&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Arizona State University | apillete@asu.edu&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="contact-links"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="https://www.linkedin.com/in/amrutheshwari-pillete-746402270/" class="download-btn" target="_blank"&gt;LinkedIn&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="https://www.imdb.com/name/nm12449652/" class="download-btn" target="_blank"&gt;IMDB Profile&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">A. PILLETE</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">CON 598 Portfolio</span>
+            <h1>Amrutheshwari Pillete</h1>
+            <p style="font-style: italic; font-size: 1.5rem; margin-bottom: 1rem;">Master's Student in Construction Management</p>
+            <p>Architectural background with a passion for combining technical expertise, problem-solving, and AI applications in construction operations.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="resume-grid">
+            <div>
+                <span class="resume-date">Prior Experience</span>
+                <h3 class="resume-role">Freelance Interior Designer</h3>
+                <p>Designed residential & commercial projects; managed contractor timelines.</p>
+            </div>
+            <div>
+                <span class="resume-date">Internship</span>
+                <h3 class="resume-role">Arth Design Build</h3>
+                <p>Assisted in architectural design documentation and coordination.</p>
+            </div>
+            <div>
+                <span class="resume-date">Leadership</span>
+                <h3 class="resume-role">Team Lead (Events)</h3>
+                <p>Led 200+ students in planning and executing large-scale campus events.</p>
+            </div>
+            <div>
+                <span class="resume-date">Media</span>
+                <h3 class="resume-role">IMDB Credits</h3>
+                <p>Production credits for over 5 movies and web series.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journal">
+        <h2>AI Research Journal</h2>
+        <div class="digest-grid">
+            
+            <div class="article-item">
+                <span class="week-tag">Week 02</span>
+                <h3>AI Digest: Weekly Analysis</h3>
+                <p>Review of the latest AI developments impacting the sector.</p>
+                <video controls>
+                    <source src="media/week2_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 03</span>
+                <h3>Pathways to AGI</h3>
+                <p>Exploring the roadmap to Artificial General Intelligence.</p>
+                <video controls>
+                    <source src="media/week3_video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 04</span>
+                <h3>OpenAI Superintelligence</h3>
+                <p>Analysis of OpenAI's strategic direction.</p>
+                <a href="media/week4_slides.pdf" class="download-btn" download>Download PDF</a>
+                <video controls>
+                    <source src="media/week4_video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 05</span>
+                <h3>AI on the Jobsite</h3>
+                <p>Practical applications of AI tools on site.</p>
+                <a href="media/week5_slides.pdf" class="download-btn" download>Download PDF</a>
+                <video controls>
+                    <source src="media/week5_video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 06</span>
+                <h3>The AEC Trifecta</h3>
+                <p>Uniting AI, Digital Twins, and BIM.</p>
+                <a href="media/week6_slides.pptx" class="download-btn" download>Download PPT</a>
+                <iframe src="https://drive.google.com/file/d/1duecadxSF6-7Vr4DLk04DpnsRpBSriu5/preview"></iframe>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 07</span>
+                <h3>AI Digest Part II</h3>
+                <p>Continued analysis of AI integration in construction workflows.</p>
+                <a href="https://docs.google.com/presentation/d/1UhLZkVOe8PH4thwSx7z1uVaUxvmcvEFW/edit?usp=share_link&ouid=105966748700679435548&rtpof=true&sd=true" class="download-btn" target="_blank">View Slides</a>
+                <iframe src="https://drive.google.com/file/d/1Il5NNVV9HgTtTwU9H2QuCfjT6jhUtQPT/preview"></iframe>
+            </div>
+
+             <div class="article-item">
+                <span class="week-tag">Week 08</span>
+                <h3>AI & Antitrust</h3>
+                <p>Legal implications of AI monopolies.</p>
+                <a href="media/week8_slides.pptx" class="download-btn" download>Download PPT</a>
+                <iframe src="https://drive.google.com/file/d/11bx2bFCQqYpz6fd8RccvITZ__7USUVfX/preview"></iframe>
+            </div>
+
+            <div class="article-item">
+                <span class="week-tag">Week 09</span>
+                <h3>End of Pre-Training Era</h3>
+                <p>Analysis of the shift in AI training methodologies.</p>
+                <a href="media/week9_slides.pdf" class="download-btn" download>Download PDF</a>
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Part 1:</p>
+                <video controls>
+                    <source src="media/week9_video.mp4" type="video/mp4">
+                </video>
+                
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Part 2 (Drive):</p>
+                <iframe src="https://drive.google.com/file/d/1w-0MEtVelQkl5ZTIsL_-ZkaGNZZP2BGC/preview"></iframe>
+            </div>
+
+             <div class="article-item">
+                <span class="week-tag">Week 10</span>
+                <h3>Construction's AI Paradox</h3>
+                <p>Why construction struggles to adopt AI.</p>
+                <a href="media/week10_slides.pptx" class="download-btn" download>Download PPT</a>
+                <iframe src="https://drive.google.com/file/d/10eifzmnEVOQwAAaEb6gBj_Gzx2TXjFfO/preview"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Semester Projects</h2>
+        
+        <div class="project-row">
+            <div class="project-img-placeholder">
+                <iframe src="https://drive.google.com/file/d/1kW2X4kbVkadOBnc74AojLkpcs7j_qX8r/preview" style="height:100%; margin:0;"></iframe>
+            </div>
+            <div class="project-info">
+                <span class="week-tag">Safety Engineering</span>
+                <h3>Zero360 Safety Analysis</h3>
+                <p>Comprehensive hazard analysis and prevention strategy group project.</p>
+                <a href="media/project_zero360_report.pdf" class="download-btn" download>Read Report</a>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-info">
+                <span class="week-tag">AI Research</span>
+                <h3>LLM Prompt Evaluation</h3>
+                <p>Testing and evaluating Large Language Model responses for construction management queries.</p>
+                <a href="media/project_llm_report.pdf" class="download-btn" download>Download Report (PDF)</a>
+                <a href="media/project_llm_slides.pptx" class="download-btn" download>Download Slides (PPT)</a>
+            </div>
+            <div class="project-img-placeholder">LLM Data Visualization</div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-img-placeholder">GPT Interface</div>
+            <div class="project-info">
+                <span class="week-tag">Custom GPT</span>
+                <h3>Jobsite Tool Tracker</h3>
+                <p>Development of a custom GPT agent to assist in tracking jobsite tools and inventory.</p>
+                <a href="media/project_tooltracker.pptx" class="download-btn" download>Presentation (PPT)</a>
+                <a href="media/project_tooltracker.pdf" class="download-btn" download>Report 1 (PDF)</a>
+                <a href="media/project_tooltracker2.pdf" class="download-btn" download>Report 2 (PDF)</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" style="text-align: center; border-top: 1px solid var(--border-color);">
+        <h2>Get In Touch</h2>
+        <p>Arizona State University | apillete@asu.edu</p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/amrutheshwari-pillete-746402270/" class="download-btn" target="_blank">LinkedIn</a>
+            <a href="https://www.imdb.com/name/nm12449652/" class="download-btn" target="_blank">IMDB Profile</a>
+        </div>
+    </section>
+
 </body>
 </html>
+
